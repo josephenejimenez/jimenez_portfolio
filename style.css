@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    overflow-y: hidden;
+}
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.divider40 {
+    height: 40px;
+}
+.dividernav {
+    height:70px;
+}
+header {
+    position: fixed;
+    background-color: #000000;
+    padding: 20px;
+    height: 30px;
+    width: 100%;
+}
+header nav ul {
+    height: 50px;
+    display: table;
+    position: fixed;
+}
+nav ul li{
+    position: relative;
+    display: table-cell;
+}
+nav ul li a{
+    padding: 0 22px 42px;
+}
+
+nav ul li a:hover{
+    font-size: larger;
+}
+li a{
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+
+.profileName{
+    position: relative;
+}
+
+.container{
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container article{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+
+
+
+footer{
+    opacity: 0.5;
+    position: fixed;
+    color: #000000;
+    bottom: 0;
+    right: 0;
+}
+
+/* services */
+
+
+
+
+/* Home Animation */
+.profileName{
+    position: absolute;
+    top: 350px;
+    left: 700px;
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileName h1{
+    position: absolute;
+    top: 120px;
+    color: #000000;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+.profileName h4{
+    position: absolute;
+    top: 220px;
+    color: #000000;
+    font-size: 2em;
+    font-weight: 60;
+    letter-spacing: 0.1em;
+}
+.lightbar{
+    position: absolute;
+    background: #000000;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    animation: animatelightbar 5s linear infinite;
+}
+.topLayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: white;
+    animation: animatetopLayer 10s linear infinite;
+}
+/* Logo Animation */
+section#home svg g#rollA{
+    transform: rotate(0deg);
+    animation-name: roll-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation-timing-function: linear;
+}
+section#home svg g#rollB{
+    transform: rotate(0deg);
+    animation-name: roll-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation-timing-function: linear;
+}
+
+
+
+
+@keyframes roll-move{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}    
+}
+@keyframes animatetopLayer {
+    0%,2.5%  {transform: translateX(0);}
+    5%     {transform: translateX(0);}
+    45%     {transform: translateX(calc(1000px - 10px));}
+    47.5%,50%{transform: translateX(calc(1000px - 10px));}
+    50.001%,52.5%  {transform: translateX(0);}
+    55%     {transform: translateX(0);}
+    95%     {transform: translateX(calc(1000px - 10px));}
+    97.5%,100%{transform: translateX(calc(1000px - 10px));}
+}
+@keyframes animatelightbar {
+    0%,05%  {transform: scaleY(0) translateX(0);}
+    10%     {transform: scaleY(1) translateX(0);}
+    90%     {transform: scaleY(1) translateX(calc(1000px - 10px));}
+    95%,100%{transform: scaleY(0) translateX(calc(1000px - 10px));}
+}
